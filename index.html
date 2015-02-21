@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas curves experiment</title>
+    <link rel="stylesheet" href="assets/stylesheets/base.css"></link>
+  </head>
+  <body>
+    <canvas id="intro"></canvas>
+    
+    <div id="controls">
+      <div class="toggler">
+        <span>+</span>TOGGLE OPTIONS
+      </div>
+      <div class="options">
+        <div class="group">
+          <h5>Shape and color</h5>
+          <div class="help">Origin is randomized on the left half of the screen by default</div>
+          <label>Origin X</label>
+          <input id="axisOriginX" name="axisOriginX" type="number"></input>
+          <label>Origin Y</label>
+          <input id="axisOriginY" name="axisOriginY" type="number"></input>
+          <label>Wave thickness</label>
+          <input id="lineWidth" name="lineWidth" type="number" value="10"></input>
+          <label>Wave color</label>
+          <input id="strokeStyle" name="strokeStyle" type="color" value="random"></input>
+          <input type="checkbox" id="randomStroke" name="randomStrike" value="radomize" class="inline" checked="true"></input>
+          <label class="inine-block">Randomize color</label>
+          <div class="help">If checked will overwrite the color chosen inside the input above with a random one</div>
+          <label>Wave angle</label>
+          <div class="help">Set maximum angle for the waves</div>
+          <input type="range" id="angle" type="angle" min="0" max="100" value="25"></input>
+        </div>
+            
+        <div class="group">
+          <h5>Shadows</h5>
+          <div class="help">Shadows are disabled by default</div>
+        
+          <label>Shadow Color</label>
+          <input id="shadowColor" name="shadowColor" type="color"></input>
+          <input type="checkbox" id="shadowSameColor" name="shadowSameColor" value="shadowSameColor" class="inline"></input>
+          <label class="inine-block">Uniform shadow's color</label>
+          <div class="help">If checked, shadow's color will the same as the wave's color</div>
+        
+        
+          <label>Shadow offset X</label>
+          <input type="number" name="shadowOffsetX" id="shadowOffsetX" value="5"></input>
+          <label>Shadow offset Y</label>
+          <input type="number" name="shadowOffsetY" id="shadowOffsetY" value="5"></input>
+          <label>Shadow blur</label>
+          <input type="number" name="shadowBlur" id="shadowBlur" value="0"></input>
+        </div>
+      
+        <div class="group">
+          <h5>Animation</h5>
+        
+          <label>Animation range</label>
+          <div class="help">Set how much a wave can evolve from it's initial shape, limiting the animation</div>
+          <input type="number" name="maxIncrease" id="maxIncrease" value="20"></input>
+          <br/>
+        
+          <label>Update amount</label>
+          <div class="help">Set how much a wave will evolve each frame</div>
+          <input type="number" name="updateAmount" id="updateAmount" value="0.3"></input>
+        
+          <label>Horizontal wave multiplier</label>
+          <div class="help">Sets the width of each curve of a wave</div>
+          <input type="number" name="horizontalWaveMultiplier" id="horizontalWaveMultiplier" value="100"></input>
+          <label>Vertical wave multiplier</label>
+          <div class="help">Sets the height of each curve of a wave</div>
+          <input type="number" name="verticalWaveMultiplier" id="verticalWaveMultiplier" value="50"></input>
+        
+          <button type="submit">Update Waves</button>
+        </div>
+      
+        <div class="clear"></div>
+      </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="assets/javascripts/curves.js"></script>
+    <script src="assets/javascripts/curves-controls.js"></script>
+  </body>
+</html>

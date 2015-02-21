@@ -1,0 +1,31 @@
+/* general style */
+html, body{margin: 0; padding: 0;}
+.clear:after{display: table; content:""; clear: both;}
+body{font-family: helvetica-neue, helvetica, arial, sans-serif; color: #222; font-size: 14px;}
+body *{box-sizing: border-box;}
+
+.help{color: #777; font-weight: 400; font-size: 12px;}
+h5{color: #222; margin-top: 15px; margin-bottom: 5px; font-size: 18px;}
+  
+.inline-block{display: inline-block;}  
+  
+/* control box style */
+#controls{position: fixed; left: 15px; bottom: 15px; right: 15px; padding: 0; border-radius: 5px; background-color: rgba(255, 255, 255, 0.75); box-shadow: 0 0 3px #000;}
+#controls .options{max-height: 0; overflow: hidden; -webkit-transition: all 500ms ease 0; -moz-transition: all 500ms ease 0; -ms-transition: all 500ms ease 0; -o-transition: all 500ms ease 0; transition: all 500ms ease 0;}
+
+#controls .group{display: inline-block; width: 33%; float: left; padding: 15px;}
+#controls input{border-radius: 3px; padding: 3px 8px; box-shadow: none; border: 1px solid #999; display: block; width: 100%;}
+#controls label{margin-top: 10px; margin-bottom: 3px; display: inline-block;}
+
+#controls input.inline{width: auto; display: inline-block;}
+
+#controls button[type="submit"]{border-radius: 3px; box-shadow: none; border: 0 none; background-color: #234567; color: #fff; padding: 8px 15px; font-size: 14px; margin-top: 10px; cursor: pointer;}
+#controls button[type="submit"]:hover{background-color: #123456;}
+
+#controls .toggler{padding: 15px 15px; width: 100%; display: block; font-size: 20px; text-transform: uppercase; cursor: pointer; color: #fff; background-color: #444; line-height: 1;}
+#controls .toggler span{font-size: 30px; margin-right: 15px;display: inline-block; width: 20px; height: 20px; line-height: 20px; text-align: center; -webkit-transform-origin: 50% 50%; -moz-transform-origin: 50% 50%; -ms-transform-origin: 50% 50%; -o-transform-origin: 50% 50%; transform-origin: 50% 50%;
+  -webkit-transition: all 500ms ease 0; -moz-transition: all 500ms ease 0; -ms-transition: all 500ms ease 0; -o-transition: all 500ms ease 0; transition: all 500ms ease 0; -webkit-transform: rotate(0); -moz-transform: rotate(0); -m-stransform: rotate(0); -o-transform: rotate(0); transform: rotate(0);
+}
+
+#controls.expanded .options{max-height: 600px;}
+#controls.expanded .toggler span{-webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -m-stransform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg);}
