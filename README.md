@@ -1,2 +1,2 @@
 # canvas-curves
-Random curves generated on canvas
+A little canvas and javascript test to cerate and modify a series of waves
