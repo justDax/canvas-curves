@@ -5,6 +5,13 @@
 //
 
 
+// TODO LIST
+// 1 - better touch controls: i want to be able to scroll canvas with 1 finger and page with 2 fingers
+// 2 - when moving the lines on touchscreens i want to calculate the difference between the starttouch point and the current touch point to move the lines
+//     now the plugin beheaves as if the touch event is the position of mouse cursor
+// 3 - smooth virtual mouse animation, now i too linear and i don't like it
+
+
 
 var canvasId = "intro";         // id of canvas element
 var fps = 60;
@@ -98,7 +105,7 @@ function drawshapes(){
 }
 
 
-// TODO ADDOLCIRE IL MOVIMENTO DEL MOUSE VIRTUALE
+// TODO Smooth virtual mouse movement, now is too linear
 function updateVirtualMousePosition(){
   // var increaseValue = 10;
   // if (canvasX !== inputX){
